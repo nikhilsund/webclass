@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil | Choose Your Own Adventure Game</title>
+</head>
+<body>
+    <script>
+        function playGame(){
+        var enter = confirm("You go scuba diving in the ocean off the coast of Australia and you see a cave, do you enter it?");
+        alert(enter);
+        if (enter == true) {
+            //we enter the cave
+            alert("You decide to enter the cave, The cave opens up into a huge dark cavern with air");
+
+            var caveChoice = prompt("The floor of the cave is wet and algae ridden while the walls are studded with beautiful gemstones and you want to grab one, you turn to the right and you see an old wooden door weathered down then you look straight and see that the cave keeps going, where do you go, the door, keep going or grab the gemstones?");
+            if (caveChoice == "keep going") {
+                alert("You keep going down the cave as it gets smaller and smaller until it opens up again with a large octopus in front of you guarding a stairwell, he's very hungry and he snatches you, swallows you whole and you die .");
+            } else if (caveChoice == "grab the gemstones") {
+                alert("You grab the biggest emerald there as its your favorite gem, you bask in its crystal light as your greed takes over. You begin franticly grabbing as many gems as you can and you try to escape. Suddenly you hear a loud rumbling noise and as the ground underneath you begins to shake you put back on your scuba gear and you make a run for it through the entrance of the cave. As soon as you start swimming you start to slowly sink with no way of getting back up, you die a slow, long and very painful death.")
+            } else (caveChoice == "the door"); {
+                alert("You open the old door and the stench of dead fish hits you in the face you think about going back up but you decide against it.");
+                var doorChoice = prompt("You see a dark wet staircase up ahead and you climb down. The staircase leads you to an old worn down dungeon, there are rusty shackles and a weathered down noose. You also see several jail cells and they keep going fading into the darkness. You continue to walk forward and it leads you to a large pit. Where do you go, the pit, the cells or go back up?");
+                if (doorChoice == "the cells") {
+                    alert("You follow the old creepy cells and suddenly you hear an loud clank. You think nothing about it and keep going, then a figure pops out of the darkness and hits you on the head with a crowbar. The brain damage is too much and you die on the spot.");
+                } else if (doorChoice == "go back up") {
+                    alert("You walk back to the staircase but then you slip on the wet stairs, you hit you head and crack you skull open and you died.");
+                } else (doorChoice == "the pit");{ 
+                    alert("You jump into the cold dark pit and you skin your knee on the sharp sides of the pit. You suddenly reach the bottom of the pit and land in a pile of fish bones.");
+
+                    var crabChoice = prompt("The fish bones are licked clean and there is no meat left on them. You see a trail of fish bones and you decide to follow it, you reach the end and you see the trail of bones leads into a large puddle. Suddenly an enormous shadowy figure jumps out of the puddle. It slowly walks out of the darkness and you see that it's a gigantic crab with a man's body. He creaks open his mandible and begins speak, You have come too far human...turn back NOW the crab booms in his gravelly voice. You think about the possible options you have, to fight him, to try and make friends with him or beg him not to kill you.");
+                    if (crabChoice == "try and make friends with him") {
+                        alert("You try to make friends with him but he hates having friends, he uses his huge claw and slices you in half, You died.");
+                    } else if (crabChoice == "fight him") {
+                        alert("You try to fight him but your just a measly human, you go for his legs however you are too small. He picks you up by your legs and throws you into the sharp cave wall. You go splat as your organs roll down the wall.");
+                    } else (crabChoice == "beg him not to kill you");{
+                        alert("You beg for forgiveness... and he gives it to you. You guys start to talk and you realize both your fathers left you. You also go out for coffee every Thursday together. You guys grow old together and eventually you die first. You Won! ");
+                    }
+
+                }
+            
+                alert("Please try again");
+            }
+        } 
+        else {
+                //we dont enter the cave
+                alert("You decide the cave if too scary and you return to the surface. However a shark was waiting for you, he eats you and you die. Game over.");
+                confirm(enter);
+        }
+
+        var playAgain = confirm("Do you want to play again?");
+        if (playAgain == true) {
+            playGame();
+        } else {
+            alert("Thanks for playing")
+        }
+
+    }
+        playGame();
+    </script>    
+</body>
+</html>
